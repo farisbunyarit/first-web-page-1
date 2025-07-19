@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirePart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            color: hsl(207, 91%, 60%);
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background-color: #b02900;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to the biggest motorcycle parts store!!</h1>
+    <p>Quality is our address – 100% original parts</p>
+    <p>We hope you enjoy our website!</p>
+
+    <img src="https://assets.roadrunner.travel/img/2024/08/WING9240.jpg" alt="Motorcycle">
+
+    <h2>Top Brands:</h2>
+    <ul>
+        <li>Yamaha</li>
+        <li>Suzuki</li>
+        <li>Honda</li>
+        <li>Kawasaki</li>
+    </ul>
+
+    <br><br>
+    <button onclick="alert('Welcome and come again!')">Click Here</button>
+    <button onclick="changeBackground()">Change Background</button>
+
+    <h3 id="changingText">Fast. Powerful. Stylish.</h3>
+
+    <script>
+        let messages = [
+            "Fast!! Powerful!! Stylish!!",
+            "Your dream bike is here!!",
+            "Feel the speed!!",
+            "Ride like never before!!"
+        ];
+
+        let index = 0;
+        setInterval(function () {
+            index = (index + 1) % messages.length;
+            document.getElementById("changingText").innerText = messages[index];
+        }, 2000);
+
+        let colors = ["#f2f2f2", "#e6e6e6", "#fff0f0", "#f0f8ff", "#ffe6cc"];
+        let colorIndex = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+    </script>
+
+</body>
+</html>
