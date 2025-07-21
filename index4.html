@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIRE PARTS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+        }
+
+        h1 {
+            color: cadetblue;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        ul {
+            text-align: left;
+            display: inline-block;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: cadetblue;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+
+        button:hover {
+            background-color: crimson;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        input, select {
+            padding: 8px;
+            margin: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Heading level 1 -->
+    <h1>Welcome to the biggest motorcycle parts store!!</h1>
+
+    <!-- Paragraph -->
+    <p>Quality is our address</p>
+
+    <!-- Image -->
+    <img src="https://assets.roadrunner.travel/img/2024/08/WING9240.jpg" alt="Motorcycle">
+
+    <!-- Heading level 2 -->
+    <h2>Top Brands:</h2>
+
+    <!-- List -->
+    <ul>
+        <li>All</li>
+        <li>Yamaha</li>
+        <li>Suzuki</li>
+        <li>Honda</li>
+        <li>Kawasaki</li>
+    </ul>
+
+    <!-- Useful Links -->
+    <h2>Useful Links</h2>
+    <p>
+        <a href="https://www.yamaha-motor.com/" target="_blank">Visit Yamaha</a><br>
+        <a href="https://www.honda.com/motorcycles" target="_blank">Visit Honda</a>
+    </p>
+
+    <!-- Table -->
+    <h2>Popular Products</h2>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Brand</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Brake Pads</td>
+            <td>Yamaha</td>
+            <td>$50</td>
+        </tr>
+        <tr>
+            <td>Chain Kit</td>
+            <td>Honda</td>
+            <td>$120</td>
+        </tr>
+    </table>
+
+    <!-- Buttons -->
+    <button onclick="alert('Welcome to our store and come again!!')">Click Here!!</button>
+    <button onclick="changeBackground()">Change Background</button>
+
+    <!-- Dynamic Text -->
+    <h3 id="changingText">Fast. Powerful. Stylish.</h3>
+
+    <!-- Form -->
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Enter Your Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+
+        <label for="email">Enter Your Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+
+        <label for="brand">Favorite Brand:</label>
+        <select id="brand" name="brand">
+            <option value="Yamaha">Yamaha</option>
+            <option value="Honda">Honda</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Kawasaki">Kawasaki</option>
+        </select>
+
+        <br>
+        <input type="submit" value="Submit" style="background-color: cadetblue; color: white;">
+    </form>
+
+    <!-- JavaScript -->
+    <script>
+        // Messages for rotating text
+        let messages = [
+            "Fast. Powerful. Stylish!!",
+            "Your dream bike is here!!",
+            "Feel the speed!!",
+            "Ride like never before!!"
+        ];
+
+        let index = 0;
+        setInterval(function () {
+            index = (index + 1) % messages.length;
+            document.getElementById("changingText").innerText = messages[index];
+        }, 2000);
+
+        // Background color changer
+        let colors = ["#f2f2f2", "#e6e6e6", "#fff0f0", "#f0f8ff", "#ffe6cc"];
+        let colorIndex = 0;
+
+        function changeBackground() {
+            document.body.style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        }
+    </script>
+
+</body>
+</html>
